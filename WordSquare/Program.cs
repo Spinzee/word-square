@@ -20,7 +20,7 @@ app.UseSwaggerUI(options =>
     options.RoutePrefix = string.Empty;
 });
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
