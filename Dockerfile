@@ -23,16 +23,3 @@ ENV ASPNETCORE_URLS=http://+:8080
 
 # Start the application
 ENTRYPOINT ["dotnet", "WordSquare.dll"]
-```
-
-## .dockerignore
-```
-bin/
-obj/
-.vs/
-.vscode/
-*.user
-*.suo
-.git/
-.gitignore
-README.md
