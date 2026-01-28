@@ -2,18 +2,12 @@
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /source
 
-# Copy solution and project file
-COPY *.sln ./
+# Copy everything first
+COPY . ./
 
-COPY WordSquare/*.csproj ./WordSquare/
-
-RUN dotnet restore *.sln
-
-# Copy everything and build
-COPY WordSquare/. ./WordSquare/
-
-# Build and publish
+# Restore and build from the WordSquare project directory
 WORKDIR /source/WordSquare
+RUN dotnet restore
 RUN dotnet publish -c Release -o /app
 
 # Runtime stage
