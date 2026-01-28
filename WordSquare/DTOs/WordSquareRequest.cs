@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using WordSquare.Validators;
 
 namespace WordSquare
 {
+    [ValidWordSquare]
     public class WordSquareRequest
     {
         [Required]
@@ -9,7 +11,5 @@ namespace WordSquare
 
         [Required]
         public string Letters { get; set; }
-
-        public bool IsValid => Letters.Length == Size * Size;
     }
 }

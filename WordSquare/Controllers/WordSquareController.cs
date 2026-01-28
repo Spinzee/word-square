@@ -15,15 +15,10 @@ namespace WordSquare.Controllers
 
         [HttpPost]
         public IActionResult Solve([FromBody] WordSquareRequest request)
-        {
-            if (!request.IsValid)
-            {
-                return BadRequest(new { error = "Request not valid. The letters supplied must match the grid size" });
-            }
-
+        {            
             var result = _buildSquare.Solve(request.Size, request.Letters);
 
-            if (result?.Count == null)
+            if (result?.Count == 0)
             {
                 return BadRequest(new { error = "No valid word square found" });
             }
