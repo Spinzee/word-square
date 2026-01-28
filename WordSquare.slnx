@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/Tests/">
+    <Project Path="WordSquareTests/WordSquareTests.csproj" />
+  </Folder>
+  <Project Path="WordSquare/WordSquare.csproj" />
+</Solution>

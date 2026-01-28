@@ -1,0 +1,6 @@
+@WordSquare_HostAddress = http://localhost:5116
+
+GET {{WordSquare_HostAddress}}/wordsquare/
+Accept: application/json
+
+###
