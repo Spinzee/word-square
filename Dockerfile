@@ -4,11 +4,15 @@ WORKDIR /source
 
 # Copy solution and project file
 COPY *.sln ./
+
 COPY WordSquare/*.csproj ./WordSquare/
-RUN dotnet restore
+
+RUN dotnet restore *.sln
 
 # Copy everything and build
 COPY WordSquare/. ./WordSquare/
+
+# Build and publish
 WORKDIR /source/WordSquare
 RUN dotnet publish -c Release -o /app
 
