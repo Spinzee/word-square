@@ -16,7 +16,10 @@ namespace WordSquareTests.Fakes
                 "LongWord",
                 "aaa",
                 "Rat",
-                "Pole"
+                "Pole",
+                "cake",
+                "cars",
+                "cold"
             };
 
             return words;
