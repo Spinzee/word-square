@@ -19,6 +19,7 @@ namespace WordSquare.Services
             }
         }
 
+        //TODO: Add prefix filtering for performance 
         public IEnumerable<string> GetWordsOfLength(int length)
         {
             var candidates = _wordsByLength.Where(w => w.Length == length).Select(w => w.Word);
